@@ -33,33 +33,41 @@ const plans = [
 const marquee = ["Friseur", "Barbershop", "Kosmetik", "Nagelstudio", "Zahnarztpraxis", "KFZ-Werkstatt", "Gastronomie", "Fitnessstudio"];
 
 export default function Home() {
+  const contactEnabled = process.env.NEXT_PUBLIC_CONTACT_ENABLED === "true";
+
   return (
     <>
-      <SiteHeader />
+      <SiteHeader contactEnabled={contactEnabled} />
       <main>
         {/* HERO */}
         <section className="relative overflow-hidden border-b border-border">
           <div className="container relative py-24 text-center md:py-32">
             <div className="animate-fade-up mx-auto mb-6 inline-flex items-center gap-2 rounded-full border border-border bg-muted px-4 py-1.5 text-xs font-medium text-muted-foreground">
               <span className="h-1.5 w-1.5 rounded-full bg-foreground" />
-              Warteliste offen · Frühzugang für lokale Betriebe
+              {contactEnabled ? "Warteliste offen · Frühzugang für lokale Betriebe" : "Portfolio-Demo · DACH Automation Platform"}
             </div>
             <h1 className="animate-fade-up mx-auto max-w-3xl text-4xl font-extrabold leading-[1.05] tracking-tight md:text-6xl">
               Nie wieder Kundenanfragen verlieren.
             </h1>
             <p className="animate-fade-up mx-auto mt-6 max-w-xl text-lg text-muted-foreground">
-              KLYSELZ baut dir einen KI-Assistenten, der rund um die Uhr antwortet, Termine bucht und dir jeden Kunden sichert — auch nach Feierabend. Sichere dir jetzt einen Platz auf der Warteliste.
+              {contactEnabled
+                ? "KLYSELZ baut dir ein System, das Anfragen strukturiert beantwortet, qualifiziert und in die Terminvergabe übergibt."
+                : "Technische Demonstration eines Systems für Anfrage-Erfassung, Qualifizierung, CRM und transparente Service Delivery. Keine Live-Kundendaten."}
             </p>
             <HeroSubscribe source="waitlist" />
             <p className="animate-fade-up mt-4 text-sm text-muted-foreground">
-              Warteliste · Frühzugang & Sonderkonditionen · DSGVO-konform
+              {contactEnabled
+                ? "Warteliste · Frühzugang & Sonderkonditionen"
+                : "Kontaktfunktionen deaktiviert · Fiktive Beispieldaten · Quellcode auf GitHub"}
             </p>
             <div className="animate-fade-up mt-6 flex flex-wrap justify-center gap-4 text-sm text-muted-foreground">
               <a href="#loesung" className="underline-offset-4 hover:text-foreground hover:underline">So funktioniert&apos;s</a>
               <span aria-hidden="true">·</span>
               <a href="#preise" className="underline-offset-4 hover:text-foreground hover:underline">Preise</a>
               <span aria-hidden="true">·</span>
-              <a href="#kontakt" className="underline-offset-4 hover:text-foreground hover:underline">Persönliches Gespräch</a>
+              <a href={contactEnabled ? "#kontakt" : "/impressum"} className="underline-offset-4 hover:text-foreground hover:underline">
+                {contactEnabled ? "Persönliches Gespräch" : "Portfolio-Modus"}
+              </a>
             </div>
           </div>
         </section>
@@ -149,7 +157,13 @@ export default function Home() {
         {/* PREISE */}
         <section id="preise" className="border-b border-border py-24">
           <div className="container">
-            <SectionHead over="Preise" title="Einfach und fair" sub="Einmalige Einrichtung + monatliche Betreuung. Jederzeit kündbar mit 30 Tagen Frist." />
+            <SectionHead
+              over={contactEnabled ? "Preise" : "Beispiel-Pakete"}
+              title={contactEnabled ? "Einfach und fair" : "Illustrative Produktstruktur"}
+              sub={contactEnabled
+                ? "Einmalige Einrichtung + monatliche Betreuung. Jederzeit kündbar mit 30 Tagen Frist."
+                : "Portfolio-Beispiele, keine verbindlichen Angebote. Marktvalidierung und Leistungsumfang sind noch offen."}
+            />
             <div className="grid gap-6 md:grid-cols-3">
               {plans.map((p) => (
                 <div key={p.tag} className={p.featured ? "rounded-2xl border-2 border-foreground bg-foreground p-8 text-background" : "rounded-2xl border border-border p-8"}>
@@ -168,13 +182,13 @@ export default function Home() {
                     ))}
                   </ul>
                   <a
-                    href="#kontakt"
+                    href={contactEnabled ? "#kontakt" : "#showreel"}
                     className={buttonVariants({
                       variant: p.featured ? "invert" : "outline",
                       className: "mt-8 w-full",
                     })}
                   >
-                    {p.featured ? "Kostenlos testen" : "Anfragen"}
+                    {contactEnabled ? (p.featured ? "Kostenlos testen" : "Anfragen") : "Demo ansehen"}
                   </a>
                 </div>
               ))}
@@ -186,10 +200,12 @@ export default function Home() {
         <section id="kontakt" className="bg-foreground py-24 text-background">
           <div className="container text-center">
             <h2 className="mx-auto max-w-2xl text-3xl font-extrabold tracking-tight md:text-4xl">
-              Sichere dir jede Anfrage — ab heute
+              {contactEnabled ? "Sichere dir jede Anfrage — ab heute" : "Portfolio-Demo — keine Datenerfassung"}
             </h2>
             <p className="mx-auto mt-4 max-w-lg text-background/70">
-              Schreib uns, und wir zeigen dir kostenlos, wie dein KI-Assistent auf deine Kunden antwortet.
+              {contactEnabled
+                ? "Schreib uns, und wir zeigen dir eine passende Demo für deinen Prozess."
+                : "Kontakt-, Wartelisten- und Briefing-Funktionen bleiben deaktiviert, bis Betrieb, Datenschutz und CRM produktionsreif geprüft sind."}
             </p>
             <div className="mt-10">
               <ContactForm />

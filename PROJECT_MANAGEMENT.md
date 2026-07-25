@@ -122,12 +122,20 @@ No paid acquisition before G2. No autonomous outreach before legal and platform 
 | Placeholder legal text goes live | High | release checklist | Obtain German legal review |
 | Offer lacks demand | High | paid-pilot gate | Stop building; interview market |
 
-## Next milestone
+## Milestones
 
-`M1 — Public portfolio baseline`
+`M1 — Public portfolio baseline` — completed 2026-07-25:
 
 - green GitHub CI;
 - public repository contains no secrets or real contacts;
-- production site deployment linked from repository;
+- production portfolio deployment linked from repository;
 - account lifecycle documented and tested;
-- first 30-day acquisition experiment opened as issues.
+- security scanning and protected delivery configured.
+
+Current: [`M2 — Pilot readiness`](https://github.com/kanuwrld/klyselz-automation-platform/milestone/1)
+
+- durable distributed login throttling;
+- cross-tenant authorization integration tests;
+- agency MFA or passkeys;
+- verified German operator/privacy information;
+- 30-day ICP and paid-pilot validation.

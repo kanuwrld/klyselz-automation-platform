@@ -1,13 +1,22 @@
 import type { Metadata } from "next";
 import "./globals.css";
 
+const contactEnabled = process.env.NEXT_PUBLIC_CONTACT_ENABLED === "true";
+
 export const metadata: Metadata = {
-  title: "KLYSELZ — KI-Automatisierung für lokale Unternehmen",
-  description:
-    "KLYSELZ baut KI-Systeme, die rund um die Uhr auf Kundenanfragen antworten, Termine buchen und keine Anfrage verloren gehen lassen. Für Friseure, Salons & lokale Betriebe in Bayern.",
+  title: contactEnabled
+    ? "KLYSELZ — KI-Automatisierung für lokale Unternehmen"
+    : "KLYSELZ — DACH Automation Platform Portfolio",
+  description: contactEnabled
+    ? "KLYSELZ baut Systeme für Kundenanfragen, Terminübergabe und sichtbare Abläufe."
+    : "Technische Portfolio-Demonstration einer DACH-orientierten Plattform für Anfragen, CRM und Service Delivery.",
   openGraph: {
-    title: "KLYSELZ — KI, die für dein Geschäft antwortet",
-    description: "Nie wieder Kundenanfragen verlieren. Rund um die Uhr, DSGVO-konform.",
+    title: contactEnabled
+      ? "KLYSELZ — Automatisierte Anfragen für lokale Betriebe"
+      : "KLYSELZ — Automation Platform Portfolio",
+    description: contactEnabled
+      ? "Anfragen erfassen, qualifizieren und in klare Abläufe übergeben."
+      : "Next.js portfolio project with German product UI and English engineering documentation.",
     locale: "de_DE",
     type: "website",
   },
