@@ -3,6 +3,7 @@ import { sql } from "@/lib/db";
 import { requireSession } from "@/lib/access";
 import { webhookSecret, textField } from "@/lib/api-security";
 import { rateLimit } from "@/lib/rate-limit";
+import { getTenantReadScope } from "@/lib/tenant-access.mjs";
 
 // GET /api/leads lists enquiries for integrations and reporting.
 // POST /api/leads accepts a signed assistant or messaging webhook.
@@ -18,7 +19,18 @@ export async function GET() {
   if (!process.env.DATABASE_URL) {
     return NextResponse.json({ error: "DATABASE_URL fehlt" }, { status: 503 });
   }
-  const rows = await sql`SELECT * FROM leads ORDER BY created_at DESC LIMIT 100`;
+  const scope = getTenantReadScope(auth.session);
+  if (!scope) {
+    return NextResponse.json({ error: "Forbidden" }, { status: 403 });
+  }
+  const rows = scope.kind === "agency"
+    ? await sql`SELECT * FROM leads ORDER BY created_at DESC LIMIT 100`
+    : await sql`
+        SELECT *
+        FROM leads
+        WHERE client_id = ${scope.clientId}
+        ORDER BY created_at DESC
+        LIMIT 100`;
   return NextResponse.json({ leads: rows });
 }
 

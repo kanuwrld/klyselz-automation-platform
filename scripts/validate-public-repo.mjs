@@ -15,6 +15,30 @@ if (listed.status !== 0) {
 const files = listed.stdout.split("\0").filter(Boolean);
 const errors = [];
 
+const requiredVercelIgnoreRules = [
+  "**/.env.*",
+  "[0-9][0-9]-*/",
+  ".claude/",
+  "*.csv",
+  "*.xlsx",
+  "*.sqlite",
+  "*.db",
+];
+
+try {
+  const vercelIgnore = readFileSync(".vercelignore", "utf8")
+    .split(/\r?\n/u)
+    .map((line) => line.trim())
+    .filter((line) => line && !line.startsWith("#"));
+  for (const rule of requiredVercelIgnoreRules) {
+    if (!vercelIgnore.includes(rule)) {
+      errors.push(`.vercelignore: required rule missing: ${rule}`);
+    }
+  }
+} catch {
+  errors.push(".vercelignore: required deployment boundary is missing");
+}
+
 const forbiddenPaths = [
   {
     name: "environment file",

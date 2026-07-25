@@ -21,15 +21,19 @@ Workflow has read-only repository permission, concurrency cancellation and a 20-
 
 Recommended CD uses Vercel Git integration, not a long-lived Vercel token inside workflow YAML.
 
-Create three Vercel projects from one repository:
+Use three Vercel projects from one repository:
 
-| Project | Root Directory | Production branch |
-| --- | --- | --- |
-| KLYSELZ Site | `apps/site` | `main` |
-| KLYSELZ Owner Admin | `apps/owner-admin` | `main` |
-| KLYSELZ Client Dashboard | `apps/client-dashboard` | `main` |
+| Project | Root Directory | Production branch | Current release state |
+| --- | --- | --- | --- |
+| KLYSELZ Site | `apps/site` | `main` | Public portfolio deployed |
+| KLYSELZ Owner Admin | `apps/owner-admin` | `main` | Git-connected; production protected by Vercel SSO |
+| KLYSELZ Client Dashboard | `apps/client-dashboard` | `main` | Production data connection blocked by tenant-isolation gate |
 
 Pull requests produce previews. `main` produces production deployments only after CI passes and branch protection allows merge.
+
+Root `.vercelignore` prevents local CLI deployments from uploading ignored
+private folders, local environment files or customer/prospect exports. Git-based
+deployments remain preferred because their source is the reviewed public commit.
 
 ## Environments
 
@@ -37,6 +41,8 @@ Pull requests produce previews. `main` produces production deployments only afte
 - Production uses dedicated protected variables.
 - `NEXT_PUBLIC_*` values are public by design. Never put secrets in them.
 - Database, auth, webhook, Resend and Telegram values remain server-side.
+- Owner Admin and Client Dashboard remain behind Vercel SSO until application
+  access checks and production data boundaries pass their release gates.
 
 ## Release gate
 
@@ -48,6 +54,10 @@ Before production:
 - desktop and mobile preview checked;
 - login, logout, disabled account, tenant boundary and health endpoint checked;
 - rollback owner named.
+
+Client Dashboard production database access remains blocked until
+[cross-tenant integration tests](https://github.com/kanuwrld/klyselz-automation-platform/issues/2)
+pass against two isolated tenants.
 
 ## Rollback
 

@@ -1,0 +1,41 @@
+# Local dependencies and generated output
+node_modules/
+**/node_modules/
+.next/
+**/.next/
+.vercel/
+**/.vercel/
+coverage/
+dist/
+out/
+*.tsbuildinfo
+
+# Secrets and local configuration
+.env
+.env.*
+**/.env
+**/.env.*
+*.pem
+*.key
+*.p12
+*.pfx
+*.crt
+*.cer
+
+# Private operating material and customer/prospect data
+[0-9][0-9]-*/
+EROPACI-VAPES-WP-BOT/
+.claude/
+*.csv
+*.xlsx
+*.xls
+*.ods
+*.sqlite
+*.sqlite3
+*.db
+
+# Local/editor files
+.DS_Store
+*.log
+*.tmp
+~$*

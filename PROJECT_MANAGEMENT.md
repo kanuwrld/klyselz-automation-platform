@@ -32,7 +32,7 @@ Out of scope until validation:
 | W1 | Demand validation | Two paid pilots in one ICP | Not validated |
 | W2 | Product | Demoable enquiry-to-delivery flow | In progress |
 | W3 | Security | No secrets/PII in Git; revocable accounts | Baseline implemented |
-| W4 | Platform | Green CI and reproducible Vercel deploy | In progress |
+| W4 | Platform | Green CI and reproducible Vercel deploy | Baseline complete; client release gated |
 | W5 | Evidence | Case study with measured before/after data | Blocked by W1 |
 
 ## Delivery board
@@ -118,7 +118,7 @@ No paid acquisition before G2. No autonomous outreach before legal and platform 
 | Disabled user keeps access | High | DB revalidation on server requests | Disable account; verify denial |
 | Serverless rate limit resets | High | Current local limiter is only baseline | Add durable limiter before public launch |
 | Invalid German outreach | High | consent-first channels and manual approval | Legal review before campaign |
-| Tenant data leakage | Critical | `client_id` checks and scoped queries | Add cross-tenant integration tests |
+| Tenant data leakage | Critical | `client_id` checks, scoped queries and blocked client production DB | Add cross-tenant integration tests |
 | Placeholder legal text goes live | High | release checklist | Obtain German legal review |
 | Offer lacks demand | High | paid-pilot gate | Stop building; interview market |
 
