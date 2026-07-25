@@ -2,6 +2,8 @@
 
 Portfolio-Monorepo für einen DACH-orientierten **Anfragen-Autopilot**. Produktoberflächen sind auf Deutsch; technische Dokumentation ist überwiegend auf Englisch.
 
+Live-Portfolio-Demo: [klyselz-flow-prod.vercel.app](https://klyselz-flow-prod.vercel.app)
+
 ## Enthalten
 
 - deutsche Website mit Anfrage- und Briefing-Flow;

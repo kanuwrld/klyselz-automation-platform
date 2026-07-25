@@ -6,6 +6,8 @@ English-first portfolio monorepo for a DACH-focused lead intake and service-deli
 
 [Deutsche Übersicht](README.de.md) · [Project management](PROJECT_MANAGEMENT.md) · [Security](SECURITY.md)
 
+Live portfolio demo: [klyselz-flow-prod.vercel.app](https://klyselz-flow-prod.vercel.app)
+
 ## Product
 
 KLYSELZ is a portfolio implementation of an **Anfragen-Autopilot**: a system for capturing enquiries, qualifying demand, booking work and keeping agency/client delivery visible.
