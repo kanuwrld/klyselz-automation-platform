@@ -26,7 +26,7 @@ Use three Vercel projects from one repository:
 | Project | Root Directory | Production branch | Current release state |
 | --- | --- | --- | --- |
 | KLYSELZ Site | `apps/site` | `main` | Public portfolio deployed |
-| KLYSELZ Owner Admin | `apps/owner-admin` | `main` | Git-connected; production protected by Vercel SSO |
+| KLYSELZ Owner Admin | `apps/owner-admin` | `main` | Git-connected; production protected by application authentication |
 | KLYSELZ Client Dashboard | `apps/client-dashboard` | `main` | Production data connection blocked by tenant-isolation gate |
 
 Pull requests produce previews. `main` produces production deployments only after CI passes and branch protection allows merge.
@@ -41,8 +41,11 @@ deployments remain preferred because their source is the reviewed public commit.
 - Production uses dedicated protected variables.
 - `NEXT_PUBLIC_*` values are public by design. Never put secrets in them.
 - Database, auth, webhook, Resend and Telegram values remain server-side.
-- Owner Admin and Client Dashboard remain behind Vercel SSO until application
-  access checks and production data boundaries pass their release gates.
+- Vercel Standard Protection guards preview and generated deployment URLs.
+  Production domains use application authentication; protecting every
+  production URL through Vercel requires an eligible paid protection plan.
+- Client Dashboard production data stays disconnected until application access
+  checks and tenant boundaries pass their release gates.
 
 ## Release gate
 
