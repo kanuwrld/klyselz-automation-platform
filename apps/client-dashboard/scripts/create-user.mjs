@@ -16,8 +16,8 @@ const password = process.env.KLYSELZ_INITIAL_PASSWORD;
 const validation = validateProvisioningInput({ email, password, role, clientName });
 
 if (!validation.ok) {
-  console.error(`Account rejected: ${validation.error}`);
-  console.error("Usage: KLYSELZ_INITIAL_PASSWORD='<secret>' npm run user:create -- <email> <agency|client> [clientName]");
+  console.error("Account input rejected. Check email, role, tenant, and password policy.");
+  console.error("Set KLYSELZ_INITIAL_PASSWORD, then run: npm run user:create -- <email> <agency|client> [clientName]");
   process.exit(1);
 }
 if (!process.env.DATABASE_URL) {
@@ -63,5 +63,5 @@ await sql`
     email_verified_at = COALESCE(users.email_verified_at, now()),
     updated_at = now()`;
 
-console.log(`Account provisioned: ${account.email} (role: ${account.role}${clientId ? `, client_id: ${clientId}` : ""})`);
+console.log("Account provisioned successfully.");
 console.log("Unset KLYSELZ_INITIAL_PASSWORD in the current shell.");
