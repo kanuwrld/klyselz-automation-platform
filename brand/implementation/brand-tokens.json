@@ -1,0 +1,43 @@
+{
+  "brand": {
+    "name": "KLYSELZ",
+    "category": "AI automation agency for local businesses",
+    "tagline": "Nie wieder Kundenanfragen verlieren."
+  },
+  "colors": {
+    "black": "#0A0A0A",
+    "white": "#FFFFFF",
+    "offWhite": "#FAFAFA",
+    "grey50": "#FAFAFA",
+    "grey100": "#F4F4F5",
+    "grey200": "#E4E4E7",
+    "grey500": "#71717A",
+    "grey800": "#27272A",
+    "grey950": "#09090B"
+  },
+  "typography": {
+    "fontSans": "Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+    "display": { "fontSize": 56, "lineHeight": 60, "fontWeight": 800 },
+    "h1": { "fontSize": 48, "lineHeight": 52, "fontWeight": 800 },
+    "h2": { "fontSize": 36, "lineHeight": 42, "fontWeight": 800 },
+    "body": { "fontSize": 16, "lineHeight": 26, "fontWeight": 400 },
+    "small": { "fontSize": 14, "lineHeight": 20, "fontWeight": 400 },
+    "caption": { "fontSize": 12, "lineHeight": 16, "fontWeight": 500 }
+  },
+  "layout": {
+    "contentMax": 1120,
+    "sectionPaddingDesktop": 96,
+    "sectionPaddingMobile": 64,
+    "cardRadius": 8,
+    "buttonRadius": 6,
+    "borderWidth": 1
+  },
+  "logo": {
+    "clearspace": "At least 1x signal-dot diameter around symbol; 0.5x symbol height around lockup.",
+    "minimumDigital": {
+      "wordmarkWidth": 120,
+      "lockupWidth": 160,
+      "symbolSize": 20
+    }
+  }
+}

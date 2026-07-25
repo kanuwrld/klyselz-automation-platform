@@ -1,0 +1,40 @@
+name: Bug report
+description: Report a reproducible defect without personal data or secrets.
+title: "[Bug] "
+labels: ["type:bug"]
+body:
+  - type: markdown
+    attributes:
+      value: Never paste credentials or customer data.
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem
+      description: What failed, for whom, and where?
+    validations:
+      required: true
+  - type: textarea
+    id: reproduce
+    attributes:
+      label: Reproduction
+      description: Minimal steps using synthetic data.
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected result
+    validations:
+      required: true
+  - type: dropdown
+    id: surface
+    attributes:
+      label: Surface
+      options:
+        - Site
+        - Owner admin
+        - Client dashboard
+        - Leadgen
+        - CI/CD
+    validations:
+      required: true

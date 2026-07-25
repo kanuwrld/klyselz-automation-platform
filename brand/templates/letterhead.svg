@@ -1,0 +1,18 @@
+<svg width="1240" height="1754" viewBox="0 0 1240 1754" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title">
+  <title id="title">KLYSELZ letterhead</title>
+  <rect width="1240" height="1754" fill="#FFFFFF"/>
+  <g transform="translate(96 88) scale(0.8)">
+    <path d="M18 12V52" stroke="#0A0A0A" stroke-width="8" stroke-linecap="square"/>
+    <path d="M28 32L46 12" stroke="#0A0A0A" stroke-width="8" stroke-linecap="square"/>
+    <path d="M28 32L48 52" stroke="#0A0A0A" stroke-width="8" stroke-linecap="square"/>
+    <circle cx="51" cy="32" r="4.5" fill="#0A0A0A"/>
+  </g>
+  <text x="168" y="136" fill="#0A0A0A" font-family="Inter, Arial, Helvetica, sans-serif" font-size="34" font-weight="800" letter-spacing="7">KLYSELZ</text>
+  <line x1="96" y1="196" x2="1144" y2="196" stroke="#E4E4E7" stroke-width="2"/>
+  <text x="96" y="310" fill="#0A0A0A" font-family="Inter, Arial, Helvetica, sans-serif" font-size="42" font-weight="800">[Document title]</text>
+  <text x="96" y="390" fill="#71717A" font-family="Inter, Arial, Helvetica, sans-serif" font-size="24" font-weight="500">[Subtitle / client / date]</text>
+  <rect x="96" y="500" width="1048" height="860" rx="16" fill="#FAFAFA" stroke="#E4E4E7" stroke-width="2"/>
+  <text x="132" y="566" fill="#71717A" font-family="Inter, Arial, Helvetica, sans-serif" font-size="24" font-weight="500">Body area</text>
+  <line x1="96" y1="1600" x2="1144" y2="1600" stroke="#E4E4E7" stroke-width="2"/>
+  <text x="96" y="1656" fill="#71717A" font-family="Inter, Arial, Helvetica, sans-serif" font-size="20" font-weight="500">KLYSELZ · AI Automation Systems · klyselz.com</text>
+</svg>

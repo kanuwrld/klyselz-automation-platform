@@ -1,0 +1,4 @@
+salon,city,channel,contact,website,has_online_booking,reviews_count,observation
+Beispiel Handwerk GmbH,München,Email,contact@example.org,https://example.org,false,24,Public contact form has no appointment flow
+Demo Gebäudeservice,Augsburg,Instagram,@demo_gebaeudeservice,,false,18,Profile asks customers to call during office hours
+Muster Elektro,Nürnberg,Referral,partner-introduction,https://example.net,true,61,Referred by fictional partner account

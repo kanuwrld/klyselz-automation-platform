@@ -1,0 +1,10 @@
+<svg width="1024" height="1024" viewBox="0 0 1024 1024" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title">
+  <title id="title">KLYSELZ social avatar</title>
+  <rect width="1024" height="1024" fill="#0A0A0A"/>
+  <g transform="translate(288 288) scale(7)">
+    <path d="M18 12V52" stroke="#FFFFFF" stroke-width="8" stroke-linecap="square"/>
+    <path d="M28 32L46 12" stroke="#FFFFFF" stroke-width="8" stroke-linecap="square"/>
+    <path d="M28 32L48 52" stroke="#FFFFFF" stroke-width="8" stroke-linecap="square"/>
+    <circle cx="51" cy="32" r="4.5" fill="#FFFFFF"/>
+  </g>
+</svg>

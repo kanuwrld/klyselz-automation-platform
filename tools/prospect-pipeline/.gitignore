@@ -1,0 +1,4 @@
+node_modules
+.env
+prospects-output.csv
+*.log

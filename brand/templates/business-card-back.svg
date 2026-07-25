@@ -1,0 +1,11 @@
+<svg width="1050" height="600" viewBox="0 0 1050 600" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title">
+  <title id="title">KLYSELZ business card back</title>
+  <rect width="1050" height="600" fill="#0A0A0A"/>
+  <g transform="translate(424 196) scale(3.2)">
+    <path d="M18 12V52" stroke="#FFFFFF" stroke-width="8" stroke-linecap="square"/>
+    <path d="M28 32L46 12" stroke="#FFFFFF" stroke-width="8" stroke-linecap="square"/>
+    <path d="M28 32L48 52" stroke="#FFFFFF" stroke-width="8" stroke-linecap="square"/>
+    <circle cx="51" cy="32" r="4.5" fill="#FFFFFF"/>
+  </g>
+  <text x="525" y="482" fill="#FFFFFF" text-anchor="middle" font-family="Inter, Arial, Helvetica, sans-serif" font-size="24" font-weight="600" letter-spacing="4">NIE WIEDER KUNDENANFRAGEN VERLIEREN.</text>
+</svg>

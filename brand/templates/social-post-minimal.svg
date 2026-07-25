@@ -1,0 +1,17 @@
+<svg width="1080" height="1080" viewBox="0 0 1080 1080" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title">
+  <title id="title">KLYSELZ minimal social post</title>
+  <rect width="1080" height="1080" fill="#FFFFFF"/>
+  <rect x="48" y="48" width="984" height="984" rx="28" stroke="#E4E4E7" stroke-width="2"/>
+  <text x="96" y="152" fill="#0A0A0A" font-family="Inter, Arial, Helvetica, sans-serif" font-size="30" font-weight="800" letter-spacing="6">KLYSELZ</text>
+  <text x="96" y="438" fill="#0A0A0A" font-family="Inter, Arial, Helvetica, sans-serif" font-size="86" font-weight="800">
+    <tspan x="96" dy="0">Nie wieder</tspan>
+    <tspan x="96" dy="96">Kundenanfragen</tspan>
+    <tspan x="96" dy="96">verlieren.</tspan>
+  </text>
+  <text x="96" y="790" fill="#71717A" font-family="Inter, Arial, Helvetica, sans-serif" font-size="34" font-weight="500">
+    <tspan x="96" dy="0">KI-Systeme für lokale Betriebe:</tspan>
+    <tspan x="96" dy="48">Antworten, Termine, Dashboard.</tspan>
+  </text>
+  <line x1="96" y1="932" x2="984" y2="932" stroke="#E4E4E7" stroke-width="2"/>
+  <text x="96" y="988" fill="#0A0A0A" font-family="Inter, Arial, Helvetica, sans-serif" font-size="28" font-weight="600">klyselz.com</text>
+</svg>

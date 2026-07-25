@@ -1,0 +1,30 @@
+name: Feature or experiment
+description: Propose a scoped feature or measurable validation experiment.
+title: "[Proposal] "
+labels: ["type:feature"]
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: User problem
+    validations:
+      required: true
+  - type: textarea
+    id: outcome
+    attributes:
+      label: Expected outcome
+    validations:
+      required: true
+  - type: textarea
+    id: acceptance
+    attributes:
+      label: Acceptance criteria
+      description: Observable checks or experiment thresholds.
+    validations:
+      required: true
+  - type: textarea
+    id: safety
+    attributes:
+      label: Data and security impact
+    validations:
+      required: true

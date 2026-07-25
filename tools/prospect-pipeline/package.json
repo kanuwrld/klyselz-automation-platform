@@ -1,0 +1,16 @@
+{
+  "name": "klyselz-lidogen",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "KLYSELZ prospect pipeline: manual input → enrich → score → reviewed draft",
+  "scripts": {
+    "start": "node pipeline.mjs",
+    "sync": "node pipeline.mjs --sync-db",
+    "dry-run": "node pipeline.mjs --dry-run"
+  },
+  "dependencies": {
+    "@neondatabase/serverless": "^0.10.4",
+    "dotenv": "^16.4.7"
+  }
+}

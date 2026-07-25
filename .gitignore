@@ -1,0 +1,44 @@
+# Dependencies and build output
+node_modules/
+.next/
+.vercel/
+coverage/
+dist/
+out/
+*.tsbuildinfo
+apps/*/package-lock.json
+tools/prospect-pipeline/package-lock.json
+
+# Secrets and local configuration
+.env
+.env.*
+**/.env
+**/.env.*
+!**/.env.example
+*.pem
+*.key
+*.p12
+*.pfx
+*.crt
+*.cer
+
+# Local data, exports and customer/prospect PII
+*.csv
+!tools/prospect-pipeline/prospects.example.csv
+*.xlsx
+*.xls
+*.ods
+*.sqlite
+*.sqlite3
+*.db
+
+# Private operating material. Public portfolio uses sanitized root docs.
+[0-9][0-9]-*/
+EROPACI-VAPES-WP-BOT/
+.claude/
+
+# Local/editor files
+.DS_Store
+*.log
+*.tmp
+~$*
